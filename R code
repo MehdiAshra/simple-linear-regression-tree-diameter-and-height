@@ -1,0 +1,20 @@
+library(readxl)
+sample <- read_xlsx(file.choose())   #File name: Diameters and heights
+
+#1. scotter plot
+scatter.smooth(x = sample$Diameters, y = sample$Heights, main = 'scotter plot', xlab = 'diameter', ylab = 'height')
+
+#2. Box plot
+#2.1. For diameter
+boxplot(sample$Diameters, main = 'diameter') 
+#2.2. For height
+boxplot(sample$Heights, main = 'height')
+
+library(e1071)
+#3. Density plot
+#3.1. For diameter
+plot(density(sample$Diameters), main = 'Density plot: Diameter', ylab = 'Frecuency', sub = paste('skweness:', round(e1071::skewness(sample$Diameters), 2)))
+polygon(density(sample$Diameters), col = 'red')
+#3.2. For height
+plot(density(sample$Heights), main = 'Density plot: Height', ylab = 'Frecuency', sub = paste('skweness:', round(e1071::skewness(sample$Heights), 2)))
+polygon(density(sample$Heights), col = 'red')
