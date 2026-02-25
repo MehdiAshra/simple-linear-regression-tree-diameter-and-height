@@ -1,4 +1,3 @@
-# Graphical-check-of-Multivariate-random-variables-in-forest-Diameter-and-height-
 Graphical checking for creating simple linear regression model
 In this process we use a data from Excel (with high normality) for having a vision about graphical checking for creating simple linear regression between tree diameter and tree height (tree diameter is independent variable and height id dependent variable).
 Why it is good to doing? Before creating any model we should to insure about our data and our analysis way.
